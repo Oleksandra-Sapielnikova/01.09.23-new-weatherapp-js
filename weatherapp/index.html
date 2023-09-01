@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ccfc6bf025.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card main-card">
+        <div class="card-body">
+          <form id="city-search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter the city"
+                  autocomplete="off"
+                  autofocus
+                  id="city-input"
+                />
+              </div>
+              <div class="col-2 magnifying-glass">
+                <button class="btn" id="search-btn">
+                  <i
+                    class="fa-solid fa-magnifying-glass magnifying-glass-btn"
+                  ></i>
+                </button>
+              </div>
+          </form>    
+              <div class="col-2 location">
+                <button class="btn" id="location-btn">
+                  <i class="fa-solid fa-location-dot location-btn"></i>
+                </button>
+              </div>
+            </div>
+          
+
+          <div class="card mt-3 weather-blur-cover p-2">
+            <div class="row">
+              <div class="col-7">
+                <div class="current-city-weather m-2">
+                  <h1 class="current-city-name" id="currentCity">Berlin</h1>
+                  <ul id="date">
+                  </ul>
+                </div>
+
+                <i class="fa-solid fa-cloud current-weather-icon"></i>
+
+                <div class="row">
+                  <div class="col-8">
+                    <span class="current-weather-temperature">
+                      <span id="temperature-now"></span>
+
+                      <span class="units">
+                        <a href="#" id="celcius-units" class="link-units">°C</a>
+                        |
+                        <a href="#" id="fahrenheit-units" class="link-units"
+                          >°F</a
+                        >
+                      </span>
+                    </span>
+                  </div>
+                  <div class="col-4">
+                    <ul class="current-weather-characteristics">
+                    <li class="current-day-weather" id="weather-description"></li>
+                      <li class="humidity">
+                        Humidity: <span class="humidity-value" id="humidity"></span> %
+                      </li>
+                      <li class="wind">
+                        Wind: <span class="wind-speed" id="wind"></span> k/h
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="day-forecast m-2">
+                  <div class="card forecast-card">
+                    <div class="card-body">
+                      <span class="date-forecast">🌥 Thu </span>
+                      <span class="temperature-forecats-max">25°</span>
+                      <span>|</span>
+                      <span class="temperature-forecats-min">15°</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="day-forecast m-2">
+                  <div class="card forecast-card">
+                    <div class="card-body">
+                      <span class="date-forecast">🌥 Thu </span>
+                      <span class="temperature-forecats-max">25°</span>
+                      <span>|</span>
+                      <span class="temperature-forecats-min">15°</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="day-forecast m-2">
+                  <div class="card forecast-card">
+                    <div class="card-body">
+                      <span class="date-forecast">🌥 Thu </span>
+                      <span class="temperature-forecats-max">25°</span>
+                      <span>|</span>
+                      <span class="temperature-forecats-min">15°</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="day-forecast m-2">
+                  <div class="card forecast-card">
+                    <div class="card-body">
+                      <span class="date-forecast">🌥 Thu </span>
+                      <span class="temperature-forecats-max">25°</span>
+                      <span>|</span>
+                      <span class="temperature-forecats-min">15°</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="day-forecast m-2">
+                  <div class="card forecast-card">
+                    <div class="card-body">
+                      <span class="date-forecast">🌥 Thu </span>
+                      <span class="temperature-forecats-max">25°</span>
+                      <span>|</span>
+                      <span class="temperature-forecats-min">15°</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="open-source-link">
+            <a href="">Open-sourced code</a> by Oleksandra Sapielnikova
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
